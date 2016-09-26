@@ -82,7 +82,7 @@ function startSession(mins){
     currentState = "session";
     startTimer(mins);
     animate("session");
-    var audio = new Audio('ding.wav');
+    var audio = new Audio('https://www.freesound.org/people/festivus31/sounds/177559/download/177559__festivus31__airplane-pa-sound-1.wav');
     audio.play();  
 }
 
@@ -90,7 +90,7 @@ function startBreak(mins){
     currentState ="break";
     startTimer(mins);
     animate("break");
-    var audio = new Audio('bell.wav');
+    var audio = new Audio('https://www.freesound.org/people/xIceCoffeex/sounds/171482/download/171482__xicecoffeex__savannah-bell.wav');
     audio.play();  
 }
 
