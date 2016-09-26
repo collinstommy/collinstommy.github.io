@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://use.fontawesome.com/ac35c7b6db.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+        crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="row">
+                <div class="col l10 offset-l1 center-align">
+                    <h3 class="title">Pomodoro Clock</h2>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col l10 s12 offset-l1 center-align">
+                    <div class="row">
+                        <div class="col l4 s12">
+                            <div class="time_control">
+                                Session Time<br />
+                                <a class="btn-floating btn-medium waves-effect waves-light  light-blue darken-4" id="minusSession">
+                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                </a>
+                                <div class="inline" id="sessionLength">25</div>
+                                <a class="btn-floating btn-medium waves-effect waves-light  light-blue darken-4" id="plusSession">
+                                    <i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col l4 s10 offset-s1">
+                            <div class="time_control timer" id="elapsed">25:00</div>
+                        </div>
+                        <div class="col l4 s12">
+                            <div class="time_control">
+                                Break Time<br />
+                                <a class="btn-floating btn-medium waves-effect waves-light light-blue darken-4" id="minusBreak">
+                                    <i class="fa fa-minus animate" aria-hidden="true"></i></a>
+                                <div class="inline" id="breakLength">5</div>
+                                <a class="btn-floating btn-medium waves-effect waves-light light-blue darken-4" id="plusBreak">
+                                    <i class="fa fa-plus animate" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div><!--  row -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6 s12 offset-l3  center-align">
+                    <div class="row control_buttons">
+                        <div class="col l4 s4 push-s2 center-align">
+                            <div id="startSession"><i class="fa fa-play fa-2x" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="col l4 s4 push-s2 center-align">
+                            <div id="statusAnimation"><i id="currentStatus" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="col l4 s4 push-s2 center-align">
+                            <div id="reset"><i class="fa fa-undo fa-2x" aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- box -->
+    </div>
+</body>
+</html>

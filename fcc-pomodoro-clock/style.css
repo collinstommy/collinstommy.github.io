@@ -1,0 +1,47 @@
+body{
+  font-size: 2em;
+  font-family: 'Righteous', cursive;
+  background-color: #122A60;
+  background: linear-gradient(to right, #085C4C , #75DDFF);
+  color: #97E0F5;
+}
+
+.animate{
+  transform: translate(2px, 2px);
+}
+
+.box{
+  margin-top: 5%;
+  background-color: #122A60;
+  box-shadow: 5px 5px 10px #070C18;
+}
+
+.inline{
+  display:inline;
+}
+
+.title{
+  margin-top: 5%;
+  font-family: 'Monoton', cursive;
+}
+
+.time_control{
+  padding-top: 20%;
+  margin-bottom: 10%;
+}
+
+.timer{
+  font-size: 1.5em;
+  border: #8598C4 5px solid;
+  border-radius: 27%;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+.control_buttons{
+  padding-bottom: 5%;
+  margin-top: -5%;
+}
+
+
+
