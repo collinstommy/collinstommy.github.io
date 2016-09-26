@@ -1,0 +1,67 @@
+
+body{
+  background: url("https://s5.postimg.org/44yklswvb/15910762_Black_and_white_repeating_torn_newspape.jpg");
+  font-family: sans-serif;
+}
+
+.signature{
+  color: black;
+  background-color: white;
+  opacity: .9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title
+{
+  background-color: white;
+  color: black;
+  opacity: .9;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+
+.center{
+   margin: 0 auto;
+   float: none;
+}
+
+.box{
+  background-color: #cdd5d5;
+  color: black;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+div.col-md-6.col-xs-10.col-md-offset-3.col-xs-offset-1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+article{
+  background-color: #126A7C;
+  color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+#articles article:hover{
+  background-color: #c5ffe9;
+  color:black;
+}
+
+#articles a{
+  text-decoration: none;
+}
+
+#input{
+  margin-bottom: 5px;
+}
+
