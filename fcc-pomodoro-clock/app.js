@@ -6,7 +6,7 @@ var sessionLength =0;
 var breakLength = 0;
 var currentState = "stopped";
 var intervalID = 0;
-init(5, 2);
+init(25, 5);
 
 $("#minusBreak").click(function(){
   if(breakLength > 0) {
@@ -93,7 +93,7 @@ function startBreak(mins){
 function startTimer(mins){
     if(intervalID > 0)  window.clearInterval(intervalID);
     secondsLeftInInterval = mins*60;
-    intervalID = window.setInterval(decrementTimer, 300);
+    intervalID = window.setInterval(decrementTimer, 1000);
 }
 
 function updateLengths(){
