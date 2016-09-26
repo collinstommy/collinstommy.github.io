@@ -37,7 +37,7 @@ $("#reset").click(function(){
 });
 
 $("#startSession").click(function(){
-    startSession(sessionLength);
+    startSession(sessionLength); 
 });
 
 function animate(type){
@@ -82,12 +82,16 @@ function startSession(mins){
     currentState = "session";
     startTimer(mins);
     animate("session");
+    var audio = new Audio('ding.wav');
+    audio.play();  
 }
 
 function startBreak(mins){
     currentState ="break";
     startTimer(mins);
     animate("break");
+    var audio = new Audio('bell.wav');
+    audio.play();  
 }
 
 function startTimer(mins){
