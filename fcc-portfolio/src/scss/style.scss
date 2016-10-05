@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url(https://fonts.googleapis.com/css?family=Exo+2);
+@import url(https://fonts.googleapis.com/css?family=Lekton:700);
+
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+$primary-text-color: white;
+$header-text-color: #405D88;
+
+$background-hero: #051A38;
+$background-title: linear-gradient(to right, #B36440 , #B39D40);
+$title-base-color: #B36440;
+$background-story: #F9FDEB;
+
+$font-family-hero: 'Lekton', 'Exo 2', sans-serif;
+$font-family-nav: 'Orbitron', sans-serif;
+$font-family-main: 'Open Sans', sans-serif;
+
+@mixin grey-shadow{
+    box-shadow: -12px -12px 1px #79A3C6; 
+}
+
+header{
+    background: $background-hero;
+    height: 100%;
+}
+
+nav{
+    font-family: $font-family-nav;
+    font-size: 1.5em;
+    float:right;
+    padding-top: 10px;
+    display: block;
+    padding-right: 2%;
+        li
+        {
+            display: inline;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        #{$a-tags} 
+        {
+            color: $primary-text-color;
+            text-decoration: none;
+        }
+        #{$a-tags-hover} 
+        {
+            color: $primary-text-color * .6;
+        }
+}
+
+.crumbs{
+  margin-top:5em;
+  margin-left: 5em;
+
+    li{
+        display:inline-block;
+        position: relative;
+        margin-right: 24px;
+    }
+    a{
+        text-decoration:none;
+        background: $header-text-color;
+        padding:0.8em 0.1em 0.8em 1.8em;
+        display: block;
+        font-size:1.3em;
+        color: $background-story;
+        text-shadow:0 1px 1px rgba(0,0,0,0.7);
+        font-family:georgia;
+    }
+    a::after{
+        content:"";
+        position: absolute;
+        border-width:27px 27px;
+        border-style:solid;
+        border-color:transparent transparent transparent $header-text-color;
+        left:100%;
+        top:0%;
+    }
+    a::before{
+        content:"";
+        position: absolute;
+        border-width:29px 22px;
+        border-style:solid;
+        border-color:transparent transparent transparent $background-story;
+        top:0%;
+        left:0px;
+    }
+    a:hover{
+        opacity:0.9;
+    }
+}
+
+@keyframes fadein {
+  0%   { background: complement($title-base-color) }
+  25%  { background: saturate($title-base-color, 20%) }
+  50%  { background: adjust-hue($title-base-color, 30%) }
+  75%  { background: lighten($title-base-color, 30%) }
+  100% { background: $background-title }
+}
+
+.hero{
+    font-family: $font-family-hero;
+    color: $primary-text-color;
+    padding-top: 25%;
+     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .6em; 
+}
+
+.title{
+    border: solid $primary-text-color 5px;
+    background: $background-title;
+    transition: background-color 0.5s ease;
+    animation: fadein 5s;
+}
+
+.story-content{
+    margin-top: 2.5em;
+}
+
+@mixin headings($color){
+    h1 { 
+        color: $color;
+        font-family: 'Open Sans Condensed', sans-serif; 
+        font-size: 50px; 
+        font-weight: 300;
+        line-height: 64px; 
+        margin: 10px 0 0; 
+        padding: .5em 30px; 
+        text-align: center;  
+    }
+
+    h2{ 
+        color: $color;
+        font-family: 'Open Sans Condensed', sans-serif; 
+        font-size: 25px; 
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 64px; 
+        text-align: center;
+        margin: 0px;  
+    }
+
+    h1:after, h1:before{
+        margin-left: 8px;
+        margin-right: 8px;
+        content: "";
+        display: inline-block;
+        position: relative;
+        height: 4px;
+        background-color:$color;
+        vertical-align: middle;
+        width: 20%;
+    }
+}
+
+@mixin paragraph{
+    p { 
+        color: #111; 
+        font-family: $font-family-main; 
+        font-size: 16px; 
+        line-height: 28px; 
+        margin: 0 0 20px; 
+    }
+}
+
+#story{
+   background: $background-story;  
+   height: 100%;
+
+   @include headings($header-text-color);
+   @include paragraph;
+    
+    img{
+      padding-left: 20%;
+    }
+
+}
+
+#work{
+    height: 100%;
+    @include headings(white);
+    background: linear-gradient(90deg, #051A38 10%, rgb(70, 74, 120) 90%);
+    color: white;
+
+    img{
+        display: block;
+        margin: auto auto;
+    }
+
+    img:hover{
+         box-shadow: (rgba(black, 0.45) 0px 0px 20px 0px);
+    }
+}
+
+.card{
+    background-image: url("http://lorempixel.com/output/city-q-c-300-300-3.jpg");
+    background-size: cover;
+    min-height: 25em;
+    max-width: 25em;
+    margin: 2em 2em;
+
+    .card-info{
+        max-height: 0px;
+        overflow: hidden;
+        display: block;
+    }
+    &:hover{
+        .card-info{
+            display: block;
+        }
+    }
+}
+
+
+
